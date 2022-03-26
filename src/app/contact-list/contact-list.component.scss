@@ -1,0 +1,56 @@
+.wrapper-contact-list{
+    border: 1px dashed red;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: auto;
+    width: 450px;
+    padding: 0;
+    height: 100%;
+    padding: 5px;
+    overflow: hidden;
+
+
+    mat-card{
+        box-sizing: border-box;
+
+        &.header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .form-field{
+                width: 80%;
+            }
+        }
+        
+    }
+
+    .contact-list-container{
+        flex-grow: 1;
+        overflow:hidden;
+        
+        .contact-list{
+            text-align: center;
+            height: 100%;
+            overflow-y: auto;
+            &>:last-child{
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    .wrapper-contact-list{
+        width: 100%;
+    }
+
+}

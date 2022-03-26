@@ -1,0 +1,22 @@
+mat-card.user-preview{
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 15px;
+
+
+
+    .contact-data-preview>div{
+        display: flex;
+        align-items: center;
+        padding: 5px 0 5px 5px;
+    }
+
+    button{
+        margin-left: 10px;
+    }
+    
+
+}

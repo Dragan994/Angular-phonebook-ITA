@@ -1,0 +1,24 @@
+<div class="wrapper-contact-list">
+    
+    <mat-card class="header">
+        <mat-form-field class="form-field">
+                <input (input)="filterContacts()" [(ngModel)]="searchFilter" class="input" matInput placeholder="Find Contact"> 
+        </mat-form-field>
+        <div *ngIf="!contactFormIsOpen" class="example-button-container">
+            <button mat-mini-fab (click)="openContactForm()">
+              <mat-icon>person_add</mat-icon>
+            </button>
+          </div>
+    </mat-card>
+    <app-contact-form *ngIf="contactFormIsOpen" [editContactData]="editContactData" (closeContactFormEvent)="closeContactForm()"></app-contact-form>
+<!--
+
+-->
+
+<div class="contact-list-container">
+
+    
+    <div class="contact-list" >
+            <app-contact *ngFor="let contact of contactList" [contactData]="contact" ></app-contact>
+    </div>
+</div>

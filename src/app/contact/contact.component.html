@@ -1,0 +1,19 @@
+<mat-card class="user-preview">
+    <div class="contact-data-preview">
+        <div>
+            <mat-icon>person</mat-icon> {{contactData.contactName}}
+        </div>
+        <div>
+            <mat-icon>phone</mat-icon> {{contactData.phoneNumber}}
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button mat-mini-fab color="primary" (click)="editContact()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" (click)="deleteContact()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</mat-card>

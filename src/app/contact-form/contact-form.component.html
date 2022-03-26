@@ -1,0 +1,26 @@
+
+
+<mat-card class="wrapper-contact-form">
+    <form [formGroup]="contactForm">
+        <div>
+            <mat-form-field class="form-field">
+                <mat-label>Name</mat-label>
+                <input class="input" formControlName="contactName" matInput placeholder='Contact name'/>
+                <mat-error *ngIf="contactForm.controls['contactName'].hasError('required')">Name is required</mat-error>
+            </mat-form-field>
+        </div>
+        
+        <div>
+            <mat-form-field class="form-field">
+                <mat-label>Phone</mat-label>
+                <input class="input"  formControlName="phoneNumber" type="text" matInput placeholder='Phone number'/>                
+                <mat-error *ngIf="contactForm.controls['phoneNumber'].hasError('required')" >Phone is required</mat-error>                
+            </mat-form-field>
+        </div>
+    </form>
+    <div class="btn-container">
+        <button mat-raised-button color="warn" (click)="closeContactForm()">Back</button>
+        <button *ngIf="!editContactData" mat-raised-button color="primary" [disabled]="!contactForm.valid" (click)="addContact()">Add Contact</button>
+        <button *ngIf="editContactData" mat-raised-button color="primary" [disabled]="!contactForm.valid" (click)="editContact()">Edit Contact</button>
+    </div>
+</mat-card>
